@@ -17,7 +17,14 @@ let expectedOutputs = [
 ]
 
 function tests() {
-
+    for (let i = 0; i < inputs.length; i++) {
+        let actualOutputs = compute(inputs[i]);
+        console.log(`Test ${i}`);
+        console.log(`\tInput: ${inputs[i]}`);
+        console.log(`\tExpected: ${expectedOutputs[i]}`);
+        console.log(`\tActual: ${actualOutputs}`);
+        console.log(`\t${actualOutputs == expectedOutputs}`)
+    }
 }
 
 // Complete method below :
