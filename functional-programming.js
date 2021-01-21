@@ -43,10 +43,10 @@ function tests() {
  */
 function compute(input) {
     return input
-        .filter(v => Math.abs(v%2) === 1)
-        .map(v => v**2)
-        .filter((value, index, self) => self.indexOf(value) === index)
-        .sort((a, b) => b - a);
+        .filter(v => Math.abs(v%2) === 1) // odd numbers only
+        .map(v => v**2) // pow 2
+        .filter((value, index, self) => self.indexOf(value) === index) // unique
+        .sort((a, b) => b - a); // sorted decreasingly
 }
 
 tests();
